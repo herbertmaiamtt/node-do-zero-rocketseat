@@ -86,4 +86,7 @@ server.delete('/videos/:id', async (request, response) =>{
  * No fastify o método listen pede que seja usado um objeto com a porta do servidor
  * como parâmetro
  */
-server.listen({ port: process.env.PORT ?? 3333, })
+server.listen({ 
+    host: '0.0.0.0',
+    port: process.env.PORT ?? 3333, 
+})
